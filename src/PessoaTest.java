@@ -20,6 +20,8 @@ public class PessoaTest
         System.out.print("Digite a sua idade: ");
         int theIdade = input.nextInt();
         minhaPessoa.setIdade(theIdade);
+        input.nextLine(); // limpa o buffer do Enter
+
 
         System.out.print("Digite a sua altura: ");
         String theAltura = input.nextLine();

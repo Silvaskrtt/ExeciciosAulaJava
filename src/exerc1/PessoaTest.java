@@ -1,3 +1,4 @@
+package exerc1;
 import java.util.Scanner;
 
 public class PessoaTest

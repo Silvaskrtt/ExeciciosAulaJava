@@ -34,14 +34,25 @@ public class AlunoTest {
 
             float resultado = calcularMedia(meuAluno.getNotas());
 
-            // Exibe os resultados
-            System.out.println("\n--- Resultado Final ---");
-            System.out.println("Nome: " + meuAluno.getNome());
-            System.out.printf("Notas: %.2f, %.2f, %.2f\n",
-                    meuAluno.getNotas()[0],
-                    meuAluno.getNotas()[1],
-                    meuAluno.getNotas()[2]);
-            System.out.printf("Média: %.2f\n", resultado);
+            if (resultado >= 7) {
+                System.out.println("\n--- Resultado Final ---");
+                System.out.println("Nome: " + meuAluno.getNome());
+                System.out.printf("Notas: %.2f, %.2f, %.2f\n",
+                        meuAluno.getNotas()[0],
+                        meuAluno.getNotas()[1],
+                        meuAluno.getNotas()[2]);
+                System.out.printf("Média: %.2f\n", resultado);
+                System.out.println("Você está aprovado\n");
+            } else {
+                System.out.println("\n--- Resultado Final ---");
+                System.out.println("Nome: " + meuAluno.getNome());
+                System.out.printf("Notas: %.2f, %.2f, %.2f\n",
+                        meuAluno.getNotas()[0],
+                        meuAluno.getNotas()[1],
+                        meuAluno.getNotas()[2]);
+                System.out.printf("Média: %.2f\n", resultado);
+                System.out.println("Você está reprovado\n");
+            }
 
         } catch (IOException e) {
             System.out.println("Erro de entrada/saída: " + e.getMessage());

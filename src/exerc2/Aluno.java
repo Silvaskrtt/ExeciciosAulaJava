@@ -3,15 +3,15 @@ package exerc2;
 public class Aluno {
 
     private String nome;
-    private float nota;
+    private float[] notas;
 
-    public Aluno(String nome, float nota) {
+    public Aluno(String nome, float[] notas) {
         this.nome = nome;
-        this.nota = nota;
+        this.notas = notas;
     }
 
     public Aluno() {
-        // construtor vazio
+        this.notas = new float[3]; // Inicializa o vetor de 3 notas
     }
 
     // Getter e Setter de nome
@@ -23,12 +23,17 @@ public class Aluno {
         this.nome = nome;
     }
 
-    // Getter e Setter de nome
-    public float getNota() {
-        return nota;
+    // Getter para o vetor de notas
+    public float[] getNotas() {
+        return notas;
     }
 
-    public void setNota(float nota) {
-        this.nota = nota;
+    // Setter para uma nota específica
+    public void setNota(int pos, float nota) {
+        if (pos >= 0 && pos < 3) {
+            this.notas[pos] = nota;
+        } else {
+            System.out.println("Posição inválida!");
+        }
     }
 }

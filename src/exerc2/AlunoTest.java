@@ -20,7 +20,6 @@ public class AlunoTest {
         Aluno meuAluno = new Aluno();
 
         System.out.println("------- Bem-vindo ao Controle de Notas -------");
-
         try {
             System.out.print("Digite o seu nome: ");
             String theNome = reader.readLine();

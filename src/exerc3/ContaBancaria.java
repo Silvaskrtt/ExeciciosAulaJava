@@ -15,7 +15,8 @@ public class ContaBancaria {
     }
 
     public ContaBancaria (){
-        // metodo vazio
+        this.titular = "Usuário Desconhecido";
+        this.saldo = 0.0;
     }
 
     public String getTitular() {
@@ -41,6 +42,7 @@ public class ContaBancaria {
     public void setSaque(double saque) {
         if (saldo > 0.0) {
             this.saque = saque;
+            saldo -= saque;
         } else {
             System.out.println("Saque invãlido, não há saldo na conta!");
         }

@@ -53,6 +53,11 @@ public class ContaBancaria {
     }
 
     public void setDepositar(double depositar) {
+        if (depositar > 0) {
         this.depositar = depositar;
+        saldo += depositar;
+        } else {
+            System.out.print("O valor que você está tentando depositar é inválido!");
+        }
     }
 }

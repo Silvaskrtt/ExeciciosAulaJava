@@ -40,11 +40,14 @@ public class ContaBancaria {
     }
 
     public void setSaque(double saque) {
-        if (saldo > 0.0) {
+        if (saque <= saldo) {
             this.saque = saque;
             saldo -= saque;
+            System.out.println("Saque no valor de "+ saque + " foi realizado com êxito!");
+        } else if (saque > saldo) {
+            System.out.println("Saque inválido, o valor de " + saque + " é maior que o saldo atual!");
         } else {
-            System.out.println("Saque invãlido, não há saldo na conta!");
+            System.out.println("Saque inválido, não há saldo na conta!");
         }
     }
 
@@ -56,8 +59,9 @@ public class ContaBancaria {
         if (depositar > 0) {
         this.depositar = depositar;
         saldo += depositar;
+        System.out.println("Depósito no valor de "+ depositar + " foi realizado com êxito!");
         } else {
-            System.out.print("O valor que você está tentando depositar é inválido!");
+            System.out.print("O valor que você está tentando depositar é inválido!\n");
         }
     }
 }

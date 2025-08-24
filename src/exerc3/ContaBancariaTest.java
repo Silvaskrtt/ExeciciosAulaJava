@@ -67,7 +67,6 @@ public class ContaBancariaTest {
                 opcaoMenu = input.nextInt();
 
             // Condição para verificar qual opção será acionada
-            while (opcaoMenu != 4) {
                 // Mostra o saldo atual da conta
                 if (opcaoMenu == 1) {
                     System.out.printf("Saldo atual: %.2f\n", minhaConta.getSaldo());
@@ -99,7 +98,7 @@ public class ContaBancariaTest {
                     opcaoMenuRollBack = input.nextInt();
 
                     // Verificação para chamar a recursividade ou parar o programa
-                    if (opcaoMenuRollBack == 2) {
+                    if (opcaoMenuRollBack == 1) {
                         menu(input, minhaConta);
                     } else {
                         System.out.println("Fechando a Conta!");
@@ -126,7 +125,6 @@ public class ContaBancariaTest {
 
                 } else {
                     System.out.println("Fechando a Conta!");
-                }
             }
         }
     }

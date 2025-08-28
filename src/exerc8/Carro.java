@@ -1,4 +1,4 @@
-package Exerc8;
+package exerc8;
 
 public class Carro {
     private int velocidade;

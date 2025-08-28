@@ -1,4 +1,4 @@
-package Exerc8;
+package exerc8;
 
 public class CarroTest {
     public static void main(String[] args) throws InterruptedException {

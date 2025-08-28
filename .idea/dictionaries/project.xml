@@ -5,6 +5,7 @@
       <w>numeros</w>
       <w>opcao</w>
       <w>preco</w>
+      <w>usuario</w>
     </words>
   </dictionary>
 </component>
